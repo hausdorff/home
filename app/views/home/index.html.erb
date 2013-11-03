@@ -1,14 +1,75 @@
 <% content_for :title, "Alex Clemmer" %>
 
 <div id="splash">
-	<p>
-		<span id="name">Alex Clemmer,</span> &nbsp;&nbsp; <span id="motto">\( \forall x: \text{ML} + x \)</span>
-	</p>
+  <p>
+    <em>Alex Clemmer</em> obtained a BSc in CS from a <i>middle-of-the-road</i> state school in 2013. He had an <i>ok-but-not-great</i> GPA. You will find him <i>abrasive</i> and <i>unkind</i>. His opinions are usually <i>ill-justified</i> and <i>poorly-expressed</i>.
+  </p>
+
+  <p>
+    Alex is currently employed at <%= link_to 'Microsoft Research', 'http://research.microsoft.com/' %>.
+  </p>
+
+
 	<%= render '/splashnav' %>
-	<p>
-		I'm a computer science student primarily interested in massive scale <%= link_to 'machine learning', 'http://en.wikipedia.org/wiki/Machine_learning' %>.
-	</p>
-	<p>
-	 	More generally, I am interested in probabilistic models of computation, especially as related to programming languages, <%= link_to 'natural language processing', 'http://en.wikipedia.org/wiki/Natural_language_processing' %>, and massive scale <%= link_to 'algorithms', 'http://en.wikipedia.org/wiki/Algorithm' %>.
-	</p>
+
+
+
+  <hr>
+
+  <a name="hack"></a>
+  <h1>#HACK</h1>
+  <h3>Some nifty recent work I did in my free time</h3>
+
+  <p>
+    <em>Turtles: turns the Apple //e into a lisp machine.</em>
+
+    Wrote code to send the assembled lisp interpreter binary from a laptop through the audio jack, to the Apple //e, which then stores the lisp and opens up a REPL.
+
+    [<%= link_to 'video', 'https://www.youtube.com/watch?v=tey9sFqICSk' %>,
+    <%= link_to 'writeup', 'http://blog.nullspace.io/apple-2-lisp-part-1.html' %>,
+    <%= link_to 'code', 'https://github.com/hausdorff/turtles' %>]
+  </p>
+
+  <p>
+    <em>pyli -- a compiler for (most of) Python that (hopefully) anyone can understand.</em>
+
+    Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. Even CS noobs and people who don't know Haskell. As soon as I finish the other steps, this will be a complete compiler, but for now it's "only" a parser and lexer.
+
+    [<%= link_to 'writeup', 'http://blog.nullspace.io/obvious-python-parser.html' %>,
+    <%= link_to 'code', 'http://github.com/hausdorff/pyli/blob/master/src/Parser.hs' %>]
+  </p>
+
+  <p>
+    <em>Completely transition all state serialization in Storm (Twitter's stream processing system) from the Java stock serializer to a type-annotated JSON.</em>
+
+    <%= link_to 'Storm', 'https://github.com/nathanmarz/storm/' %> is a stream processing system from Backtype (acquired by Twitter).
+
+    Storm used to use Java's stock serialization capabilities to persist system state (useful, e.g., for checkpointing and reliability purposes).
+
+    This patch completely replaces stock Java serialization with a type-annotated JSON called EDN.
+
+    This solves issues <%= link_to '#419', 'https://github.com/nathanmarz/storm/issues/419' %> and <%= link_to '#525', 'https://github.com/nathanmarz/storm/issues/525' %>, and supersedes pull request <%= link_to '#497', 'https://github.com/nathanmarz/storm/pull/497' %>.
+
+    [<%= link_to 'code', 'https://github.com/nathanmarz/storm/pull/625' %>]
+  </p>
+
+
+  <hr>
+
+  <a name="about"></a>
+  <h1>#ABOUT</h1>
+  <h3>Here is how you can find me and stuff</h3>
+
+  <p>
+    I organize <%= link_to 'Hack and Tell Seattle', 'http://seattle.hackandtell.org' %>. You can find me elsewhere:
+  </p>
+
+  <p>
+    <ul>
+      <li>Twitter: <%= link_to '@hausdorff_space', 'http://twitter.com/hausdorff_space' %></li>
+      <li>GitHub: <%= link_to '@hausdorff', 'http://github.com/hausdorff' %></li>
+      <li>Email: <%= mail_to 'clemmer.alexander@gmail.com' %></li>
+    </ul>
+  </p>
+
 </div>

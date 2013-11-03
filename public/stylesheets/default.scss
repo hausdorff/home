@@ -1,211 +1,74 @@
-$splash-text-color: #555;
-$byline-text-color: #444;
-$splash-text-size: 17px;
-$splash-name-size: 40px;
-$splash-name-color: #666;
-$splash-motto-size: 23px;
-
-$def-link-hover: #4a49ff;
-$def-bg: whiteSmoke;
-
-
-@mixin spl-link {
-	a {
-		/*background-color: #fff;*/
-		color: $byline-text-color;
-	}
-
-	a:hover {
-		color: $def-link-hover;
-	}
-}
-
-@mixin splash-text {
-	font-size: $splash-text-size;
-	font-weight: lighter;
-	color: $splash-text-color;
-}
-
-@mixin splash {
-	div#splash {
-		@include splash-text;
-		width:500px;
-	}
-
-	span#name {
-		@include splash-text;
-		font-size: $splash-name-size;
-		color: $splash-name-color;
-		font-weight:bold;
-	}
-	
-	span#motto {
-		@include splash-text;
-		font-size: $splash-motto-size;
-		color: $splash-name-color;
-		font-weight:bold;
-	}
-	
-	span.field {
-		@include splash-text;
-		font-weight: bold;
-	}
-}
-
-@mixin content {
-	div#content {
-		@include splash-text;
-		width:800px;
-	}
-
-	content#name {
-		@include splash-text;
-		color: $def-link-hover;
-	}
-}
-
-@mixin byline {
-	div#byline {
-		margin-top:5px;
-		font-weight: normal;
-		font-size:20px;
-
-		a {
-			text-decoration: none;
-			background-color: inherit;
-			padding-top:15px;
-			padding-bottom:20px;
-			color:#888;
-		}
-		
-		a:hover {
-			color:$def-link-hover;
-		}
-	}
-}
-
-@mixin about {
-	div#about {
-		background-color: white;
-		line-height: 120%;
-		padding: 10px;
-		padding-right: 30px;
-		padding-left: 30px;
-		border-radius: 15px;
-		box-shadow: 5px 5px 5px #AAA;
-		
-		a {
-			text-decoration: underline;
-		}
-		
-		span#about-name {
-			color: $def-link-hover;
-		}
-	}
-}
-
-@mixin whitebox {
-	background-color: white;
-	line-height: 120%;
-	padding: 10px;
-	padding-right: 30px;
-	padding-left: 30px;
-	border-radius: 15px;
-	box-shadow: 5px 5px 5px #AAA;
-}
-
-@mixin post {
-	div.post {
-		@include whitebox;
-
-		h1 {
-			line-height:100%;
-		}
-
-		a {
-			text-decoration: underline;
-		}
-	}
-}
-
-@mixin footnote {
-	div.footnote {
-		margin-top: 10px;
-		@include whitebox;
-	}
-}
-
-@mixin copyright {
-	div#copyright {
-		float:right;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		color: #bbb;
-		font-size: 12px;
-	}
-}
-
-
 body {
-	width:800px;
-	padding:0;
-	margin:0;
-	margin-top:40px;
-	margin-left:auto;
-	margin-right:auto;
-	font-family:helvetica;
-	font-weight: lighter;
-	font-size: 16px;
-	background-color: $def-bg;
-	background-image:url('../images/splashbg.png');
-	background-repeat:y-repeat;
-	background-position: top center;
-	color: $splash-text-color;
-	
-	.paper {
-		font-size: 14px;
-		
-		.title {
-			font-weight: bold;
-		}
-	}
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.5;
+  background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: #5d5d5d;
+  width: 600px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-hr {
-	border: 0;
-	width: 90%;
-	height: 1px;
-	background-color: $splash-text-color;
+a {
+  color: #4a49dd;
+  /*color: #2d2d2d;*/
+  font-weight: 200;
+  text-decoration: none;
+}
+a:hover {
+  /*color: #c5000c;*/
+  color: #b5000c;
+  text-decoration: underline;
+}
+
+em {
+  font-weight: 900;
+  color: #404040;
+  font-style: normal;
 }
 
 h1 {
-	font-size: 48px;
+  font-family: 'Helvetica'; font-weight: 900;
+  letter-spacing: 0px;
+  font-size: 2em;
+  color: #303030;
+  line-height: 0.9;
+  text-align:center;
+  margin-bottom:-0.1em;
 }
 
-b {
-	font-weight: bold;
+h3 {
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  font-size:0.75em;
+  color: #8d8d8d;
 }
 
-table {
-	margin: 1em;
-	border-collapse: collapse;
+hr {
+  height: 1px;
+  line-height: 1px;
+  margin-top: 8em;
+  padding-bottom: 1em;
+  border: none;
+  background: transparent url('../images/hr.png') 50% 0 no-repeat;
 }
 
-td, th {
-	padding: 10px;
+div#byline {
+  text-align: center;
+
+  a {
+    font-weight: 900;
+  }
 }
 
-tr {
-	border: 1px #ccc solid;
+footer {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  font-weight: 300;
+  font-size: 12px;
+  color: #9d9d9d;
 }
-
-
-@include spl-link;
-@include byline;
-@include splash;
-@include about;
-@include copyright;
-@include content;
-@include post;
-@include footnote;
-
