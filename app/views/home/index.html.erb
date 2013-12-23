@@ -2,11 +2,15 @@
 
 <div id="splash">
   <p>
-    <em>Alex Clemmer</em> obtained a BSc in CS from a <i>middle-of-the-road</i> state school in 2013. He had an <i>ok-but-not-great</i> GPA. You will find him <i>abrasive</i> and <i>unkind</i>. His opinions are usually <i>ill-justified</i> and <i>poorly-expressed</i>.
+    <em>Alex Clemmer</em> obtained a BS in CS from a <i>middle-of-the-road</i> state school in 2013. He had an <i>ok-but-not-great</i> GPA. You will find him <i>abrasive</i> and <i>unkind</i>. His opinions are usually <i>ill-justified</i> and <i>poorly-expressed</i>.
   </p>
 
   <p>
-    Alex is currently employed at <%= link_to 'Microsoft Research', 'http://research.microsoft.com/' %>.
+    Alex is mostly known for <%= link_to 'turning Snapchat into a remote filesystem', "#snapchat-fs" %>, <%= link_to 'porting lisp to the Apple //e', "#turtles" %>, and <%= link_to 'implementing Python 3 in a couple thousand lines of Haskell', "#pyli" %>.
+  </p>
+
+  <p>
+    Alex is currently employed at <%= link_to 'Microsoft', 'http://www.microsoft.com/' %>.
   </p>
 
 
@@ -21,6 +25,16 @@
   <h3>Some nifty recent work I did in my free time</h3>
 
   <p>
+    <a name="snapchat-fs"></a>
+    <em>Snapchat FS</em>
+
+    I reverse engineered Snapchat's private API. Snapchat FS is a client I wrote (with some help from <%= link_to '@pencilo', 'https://github.com/pencilo' %> ) that allows you to use Snapchat to store and manage arbitrary files.
+
+    [<%= link_to 'code', 'https://github.com/hausdorff/snapchat-fs' %>]
+  </p>
+
+  <p>
+    <a name="turtles"></a>
     <em>Turtles: turns the Apple //e into a lisp machine.</em>
 
     Wrote code to send the assembled lisp interpreter binary from a laptop through the audio jack, to the Apple //e, which then stores the lisp and opens up a REPL.
@@ -31,6 +45,7 @@
   </p>
 
   <p>
+    <a name="pyli"></a>
     <em>pyli -- a compiler for (most of) Python that (hopefully) anyone can understand.</em>
 
     Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. Even CS noobs and people who don't know Haskell. As soon as I finish the other steps, this will be a complete compiler, but for now it's "only" a parser and lexer.
@@ -44,7 +59,7 @@
 
     <%= link_to 'Storm', 'https://github.com/nathanmarz/storm/' %> is a stream processing system from Backtype (acquired by Twitter).
 
-    Storm used to use Java's stock serialization capabilities to persist system state (useful, e.g., for checkpointing and reliability purposes).
+    Storm used to use Java's stock serialization capabilities to persist system state (useful, <i>e.g.</i>, for checkpointing and reliability purposes).
 
     This patch completely replaces stock Java serialization with a type-annotated JSON called EDN.
 
