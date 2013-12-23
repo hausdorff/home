@@ -26,36 +26,39 @@
 
   <p>
     <a name="snapchat-fs"></a>
-    <em>Snapchat FS</em> <br/>
+    <em>Snapchat FS</em> &#8212;
+    [<%= link_to 'code', 'https://github.com/hausdorff/snapchat-fs' %>]
+    <br/>
 
     I reverse engineered Snapchat's private API. Snapchat FS is a client I wrote (with some help from <%= link_to '@pencilo', 'https://github.com/pencilo' %> ) that allows you to use Snapchat to store and manage arbitrary files.
-
-    [<%= link_to 'code', 'https://github.com/hausdorff/snapchat-fs' %>]
   </p>
 
   <p>
     <a name="turtles"></a>
-    <em>Turtles: turns Apple //e -> lisp machine</em> <br/>
-
-    Wrote code to send the assembled lisp interpreter binary from a laptop through the audio jack, to the Apple //e, which then stores the lisp and opens up a REPL.
-
+    <em>Turtles: turns Apple //e -> lisp machine</em> &#8212;
     [<%= link_to 'video', 'https://www.youtube.com/watch?v=tey9sFqICSk' %>,
     <%= link_to 'writeup', 'http://blog.nullspace.io/apple-2-lisp-part-1.html' %>,
     <%= link_to 'code', 'https://github.com/hausdorff/turtles' %>]
+
+    <br/>
+
+    Wrote code to send the assembled lisp interpreter binary from a laptop through the audio jack, to the Apple //e, which then stores the lisp and opens up a REPL.
   </p>
 
   <p>
     <a name="pyli"></a>
-    <em>pyli -- Python 3 compiler in < 4000 lines of code</em> <br/>
-
-    Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. As soon as I finish the AST-to-bytecode step, this will be a complete compiler, but for now it's "only" a parser and lexer.
-
+    <em>pyli -- Python 3 compiler in &lt; 4000 lines of code</em> &#8212;
     [<%= link_to 'writeup', 'http://blog.nullspace.io/obvious-python-parser.html' %>,
     <%= link_to 'code', 'http://github.com/hausdorff/pyli/blob/master/src/Parser.hs' %>]
+   <br/>
+
+    Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. As soon as I finish the AST-to-bytecode step, this will be a complete compiler, but for now it's "only" a parser and lexer.
   </p>
 
   <p>
-    <em>Completely transition all state serialization in Storm (Twitter's stream processing system) from the Java stock serializer to a type-annotated JSON</em> <br/>
+    <em>Completely transition all state serialization in Storm (Twitter's stream processing system) from the Java stock serializer to a type-annotated JSON</em> &#8212;
+    [<%= link_to 'code', 'https://github.com/nathanmarz/storm/pull/625' %>]
+    <br/>
 
     <%= link_to 'Storm', 'https://github.com/nathanmarz/storm/' %> is a stream processing system from Backtype (acquired by Twitter).
 
@@ -64,8 +67,6 @@
     This patch completely replaces stock Java serialization with a type-annotated JSON called EDN.
 
     This solves issues <%= link_to '#419', 'https://github.com/nathanmarz/storm/issues/419' %> and <%= link_to '#525', 'https://github.com/nathanmarz/storm/issues/525' %>, and supersedes pull request <%= link_to '#497', 'https://github.com/nathanmarz/storm/pull/497' %>.
-
-    [<%= link_to 'code', 'https://github.com/nathanmarz/storm/pull/625' %>]
   </p>
 
 
