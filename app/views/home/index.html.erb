@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    Alex is currently employed at <%= link_to 'Microsoft', 'http://www.microsoft.com/' %>.
+    Alex is currently employed at <%= link_to 'Microsoft', 'http://www.microsoft.com/', :target => 'employer' %>.
   </p>
 
 
@@ -27,18 +27,18 @@
   <p>
     <a name="snapchat-fs"></a>
     <em>Snapchat FS</em> &#8212;
-    [<%= link_to 'code', 'https://github.com/hausdorff/snapchat-fs' %>]
+    [<%= link_to 'code', 'https://github.com/hausdorff/snapchat-fs', :target => 'snapchatfs' %>]
     <br/>
 
-    I reverse engineered Snapchat's private API. Snapchat FS is a client I wrote (with some help from <%= link_to '@pencilo', 'https://github.com/pencilo' %> ) that allows you to use Snapchat to store and manage arbitrary files.
+    I reverse engineered Snapchat's private API. Snapchat FS is a client I wrote (with some help from <%= link_to '@pencilo', 'https://github.com/pencilo', :target => 'pencilo' %> ) that allows you to use Snapchat to store and manage arbitrary files.
   </p>
 
   <p>
     <a name="turtles"></a>
     <em>Turtles: turns Apple //e -> lisp machine</em> &#8212;
-    [<%= link_to 'video', 'https://www.youtube.com/watch?v=tey9sFqICSk' %>,
-    <%= link_to 'writeup', 'http://blog.nullspace.io/apple-2-lisp-part-1.html' %>,
-    <%= link_to 'code', 'https://github.com/hausdorff/turtles' %>]
+    [<%= link_to 'video', 'https://www.youtube.com/watch?v=tey9sFqICSk', :target => 'turtles-video' %>,
+    <%= link_to 'writeup', 'http://blog.nullspace.io/apple-2-lisp-part-1.html', :target => 'turtles-writeup' %>,
+    <%= link_to 'code', 'https://github.com/hausdorff/turtles', :target => 'turtles-code' %>]
 
     <br/>
 
@@ -48,8 +48,8 @@
   <p>
     <a name="pyli"></a>
     <em>pyli&#8212;Python 3 compiler in &lt; 4000 lines of code</em> &#8212;
-    [<%= link_to 'writeup', 'http://blog.nullspace.io/obvious-python-parser.html' %>,
-    <%= link_to 'code', 'http://github.com/hausdorff/pyli/blob/master/src/Parser.hs' %>]
+    [<%= link_to 'writeup', 'http://blog.nullspace.io/obvious-python-parser.html', :target => 'pyli-writeup' %>,
+    <%= link_to 'code', 'http://github.com/hausdorff/pyli/blob/master/src/Parser.hs', :target => 'pyli-code' %>]
    <br/>
 
     Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. As soon as I finish the AST-to-bytecode step, this will be a complete compiler, but for now it's "only" a parser and lexer.
@@ -57,22 +57,22 @@
 
   <p>
     <em>Completely transition all state serialization in Storm (Twitter's stream processing system) from the Java stock serializer to a type-annotated JSON</em> &#8212;
-    [<%= link_to 'code', 'https://github.com/nathanmarz/storm/pull/625' %>]
+    [<%= link_to 'code', 'https://github.com/nathanmarz/storm/pull/625', :target => 'storm-pr' %>]
     <br/>
 
-    <%= link_to 'Storm', 'https://github.com/nathanmarz/storm/' %> is a stream processing system from Backtype (acquired by Twitter).
+    <%= link_to 'Storm', 'https://github.com/nathanmarz/storm/', :target => 'storm' %> is a stream processing system from Backtype (acquired by Twitter).
 
     Storm used to use Java's stock serialization capabilities to persist system state (useful, <i>e.g.</i>, for checkpointing and reliability purposes).
 
     This patch completely replaces stock Java serialization with a type-annotated JSON called EDN.
 
-    This solves issues <%= link_to '#419', 'https://github.com/nathanmarz/storm/issues/419' %> and <%= link_to '#525', 'https://github.com/nathanmarz/storm/issues/525' %>, and supersedes pull request <%= link_to '#497', 'https://github.com/nathanmarz/storm/pull/497' %>.
+    This solves issues <%= link_to '#419', 'https://github.com/nathanmarz/storm/issues/419', :target => 'storm-issue-5419' %> and <%= link_to '#525', 'https://github.com/nathanmarz/storm/issues/525', :target => 'storm-issue=525' %>, and supersedes pull request <%= link_to '#497', 'https://github.com/nathanmarz/storm/pull/497', :target => 'storm-pr-497' %>.
   </p>
 
   <p>
     <em>Adding Haskell's <tt>where</tt> clause to OCaml</em> &#8212;
-    [<%= link_to 'writeup', 'http://blog.nullspace.io/adding-haskells-where-to-ocaml.html' %>,
-    <%= link_to 'code', 'https://github.com/hausdorff/ocaml-where' %>]
+    [<%= link_to 'writeup', 'http://blog.nullspace.io/adding-haskells-where-to-ocaml.html', :target => 'where-writeup' %>,
+    <%= link_to 'code', 'https://github.com/hausdorff/ocaml-where', :target => 'where-code' %>]
    <br/>
 
     I love Haskell's <tt>where</tt> clause. It is one of the features I really missed when I started learning OCaml, and eventually it got so bad, I ended up just extending OCaml syntax to support it.
@@ -86,13 +86,13 @@
   <h3>Here is how you can find me and stuff</h3>
 
   <p>
-    I organize <%= link_to 'Hack and Tell Seattle', 'http://seattle.hackandtell.org' %>. You can find me elsewhere:
+    I organize <%= link_to 'Hack and Tell Seattle', 'http://seattle.hackandtell.org', :target => 'hack-and-tell-seattle' %>. You can find me elsewhere:
   </p>
 
   <p>
     <ul>
-      <li>Twitter: <%= link_to '@hausdorff_space', 'http://twitter.com/hausdorff_space' %></li>
-      <li>GitHub: <%= link_to '@hausdorff', 'http://github.com/hausdorff' %></li>
+      <li>Twitter: <%= link_to '@hausdorff_space', 'http://twitter.com/hausdorff_space', :target => 'twitter' %></li>
+      <li>GitHub: <%= link_to '@hausdorff', 'http://github.com/hausdorff', :target => 'github' %></li>
       <li>Email: <%= mail_to 'clemmer.alexander@gmail.com' %></li>
     </ul>
   </p>
