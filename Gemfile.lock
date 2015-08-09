@@ -71,7 +71,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   iconv
-  jekyll
+  jekyll (~> 2.5.3)
 
 BUNDLED WITH
    1.10.5
