@@ -1,0 +1,111 @@
+---
+layout: default
+title: Alex Clemmer
+---
+
+<div id="splash">
+  <p>
+    <em>Alex Clemmer</em> obtained a BS in computer science from a <i>middle-of-the-road</i> state school in 2013. He had an <i>ok-but-not-great</i> GPA. 3 out of 5 officemates agree that Alex has programmed before.
+  </p>
+
+  <p>
+  Alex is mostly known for <b>(1)</b> <a href="#snapchat-fs">turning Snapchat into a remote filesystem</a>, <b>(2)</b> <a href="#turtles">porting lisp to the Apple //e</a>, <b>(3)</b> <a href="#pyli">implementing Python 3 in a couple thousand lines of Haskell</a>, and <b>(4)</b> <a href="#bangbangcon">organizing !!Con</a>.
+  </p>
+
+  <p>
+  Alex has been programming for about 4 years (as of early 2014).
+  </p>
+
+  <p>
+    Alex is currently employed at <a href="http://www.microsoft.com/" target="_employer">Microsoft</a>.
+  </p>
+
+
+  <div id="byline">
+    <a href="http://blog.nullspace.io">BLOG</a>
+    <a href="#hack">#HACK</a> ·
+    <a href="#misc">#MISC</a> ·
+    <a href="#contact">#CONTACT</a>
+  </div>
+
+
+
+  <hr>
+
+  <a name="hack"></a>
+  <h1>#HACK</h1>
+  <h3>Some nifty recent work I did in my free time</h3>
+
+  <p>
+    <a name="snapchat-fs"></a>
+    <em>Snapchat FS</em> &#8212;
+    [<a href="https://github.com/hausdorff/snapchat-fs" target="snapchatfs">code</a>]
+    <br/>
+
+    I reverse engineered Snapchat's private API. Snapchat FS is a client I wrote (with some help from <a href="https://github.com/pencilo" target="pencilo">@pencilo</a>) that allows you to use Snapchat to store and manage arbitrary files.
+  </p>
+
+  <p>
+    <a name="turtles"></a>
+    <em>Turtles: turns Apple //e -> lisp machine</em> &#8212;
+    [<a href="https://www.youtube.com/watch?v=tey9sFqICSk" target="turtles-video">video</a>,
+    <a href="http://blog.nullspace.io/apple-2-lisp-part-1.html" target="turtles-writeup">writeup</a>,
+    <a href="https://github.com/hausdorff/turtles" target="turtles-code">code</a>]
+
+    <br/>
+
+    Wrote code to send the assembled lisp interpreter binary from a laptop through the audio jack, to the Apple //e, which then stores the lisp and opens up a REPL.
+  </p>
+
+  <p>
+    <a name="pyli"></a>
+    <em>pyli&#8212;Python 3 compiler in &lt; 4000 lines of code</em> &#8212;
+    [<a href="http://blog.nullspace.io/obvious-python-parser.html" target="pyli-writeup">writeup</a>,
+    <a href="http://github.com/hausdorff/pyli/blob/master/src/Parser.hs" target="pyli-code">code</a>]
+   <br/>
+
+    Writing parsers and lexers is really hard. I wondered if I could write a parser for almost all of Python that anyone could understand. As soon as I finish the AST-to-bytecode step, this will be a complete compiler, but for now it's "only" a parser and lexer.
+  </p>
+
+  <p>
+    <em>Adding Haskell's <tt>where</tt> clause to OCaml</em> &#8212;
+    [<a href="http://blog.nullspace.io/adding-haskells-where-to-ocaml.html" target="where-writeup">writeup</a>,
+    <a href="https://github.com/hausdorff/ocaml-where" target="where-code">code</a>]
+   <br/>
+
+    I love Haskell's <tt>where</tt> clause. It is one of the features I really missed when I started learning OCaml, and eventually it got so bad, I ended up just extending OCaml syntax to support it.
+  </p>
+
+
+  <hr>
+
+  <a name="misc"></a>
+  <h1>#MISC</h1>
+  <h3>Non-computer doings.</h3>
+
+  <p>
+    <a name="bangbangcon"></a>
+    <em>!!Con, founding co-organizer</em> &#8212;
+    [<a href="http://bangbangcon.com/" target="bangbangcon">Website</a>]
+    <br/>
+
+    More than 40% of our 27 speakers were women, and all speakers were chosen by a blind program committee. More than a third of attendees were women. Our entire ticket stock sold out in under 15 seconds. We obtained more than $15k in sponsorships. The talks were all amazing.
+  </p>
+
+
+  <hr>
+
+  <a name="contact"></a>
+  <h1>#CONTACT</h1>
+  <h3>Here is how you can find me and stuff</h3>
+
+
+  <p>
+    <ul>
+      <li>Twitter: <a href="http://twitter.com/hausdorff_space" target="twitter">@hausdorff_space</a></li>
+      <li>GitHub: <a href="http://github.com/hausdorff" target="github">@hausdorff</a></li>
+      <li>Email: clemmer.alexander@gmail.com</li>
+    </ul>
+  </p>
+
+</div>
